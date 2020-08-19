@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BST_traversal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <style>
+        .container { 
+        height: 200px;
+        position: relative;
+        border: 3px solid royalblue; 
+        }
+
+      .btn {
+        border: none;
+        color: rgb(19, 1, 1);
+        padding: 16px 50px;
+        font-size: 20px;
+        position: relative;
+        text-align-last: center;
+        cursor: pointer;
+        /* opacity: 0.8;
+        transition: 0.1s;  */
+        /*background-color:rgb(170, 125, 243); */
+      }
+     
+  </style>
+    
+  <body>
+      <ul class="nav nav-pills">
+          <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+          <li><a data-toggle="pill" href="#about">About</a></li>
+      </ul>
+
+
+    <div class="jumbotron text-center">
+      <h1>Preorder to Postorder BST</h1>
+      <p>Enter an array representing preorder traversal of BST</p>
+      <p style="color: orange"><strong>Warning! </strong>Enter only elements seperated by blank spaces. eg. 10 20 30 40
+      </p>
+      {% if variable==[] %}
+        <p style="color: red"><strong>Error! </strong>Enter expression in proper form </p> 
+      {% endif %}
+    </div>
+
+
+
+    <div class="tab-content">
+      <div id="home" class="tab-pane fade in active">
+        <div class="container" style="padding-top: 55px; padding-left: 100px; padding-right: 30px; padding-bottom: 30px" align="cursor" >
+            <!-- <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+                  <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Infix to Postfix</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Infix to Prefix</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Postfix to Prefix</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Postfix to Infix</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Prefix to Postfix</a></li>
+              </ul>
+            </div> -->
+                     
+          <div class="row">
+             <form action="#" method="post">
+                <div class="col-sm-4">
+                  <label for="input">Input Expression:</label>
+                  <input type="text" class="form-control" id="input" name="exp">
+                </div> 
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2">
+                  <div class="btn submit_btn"> 
+                    <button type="submit" name="btn" value="submit" ><b>
+                        Check</b>
+                    </button>    
+                  </div>
+                </div>
+              </form>
+              <div class="col-sm-1">
+              </div>
+              <div class="col-sm-4">
+                <h3>{{variable}}</h3>  
+              </div>
+          </div>
+        </div>
+      </div>
+        <div id="about" class="tab-pane fade">
+            <div class="container" style="padding-top: 25px; padding-left: 100px">
+            <div class="row">
+            <div class="col-sm-4" style="text-align: center;"> 
+              <img src="{{ url_for('static',filename='KD.jpeg')}}" class="img-circle" width="150" height="150"> 
+              </div> 
+              <div class="col-sm-2" style="text-align: left;"></div>
+            <div class="col-sm-4">  
+              <h3 style="text-align: right;">Kaushik Daspute</h3>
+                <h4 style="text-align: right;"><a href="{{ url_for('route1') }}">Mail</a></h3>
+                <h4 style="text-align: right;"><a href="{{ url_for('route2') }}" target="_blank">LinkedIn</a></h3>
+              </div> 
+          </div>
+        </div>
+        </div>
+    </div>
+  </body>
+</html>
